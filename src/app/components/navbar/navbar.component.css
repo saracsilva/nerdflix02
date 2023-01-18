@@ -1,34 +1,46 @@
 .navbar {
   background-color: #131313;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   width: 100vw;
   height: calc(15vh+ 7vh);
   min-height: 3vw;
   justify-content: space-between;
   align-items: center;
 }
+
+.navBarLinks {
+  grid-column-start: 1;
+  justify-self: start;
+}
 .navbar .pages {
   display: flex;
   gap: 0.5rem;
   list-style: none;
+  grid-column-start: 1;
+  justify-self: start;
   padding-left: 3.5vw;
 }
 .navbar .pages a {
   color: #fff;
   text-decoration: none;
   display: block;
+  margin-left: auto;
 }
 .logo {
-  width: 3vw;
-  min-width: 8vw;
+  width: 5vw;
+  max-width: 8vw;
   justify-self: center;
-  padding: 1rem;
+  align-self: center;
 }
 .likes {
   margin-right: 3.5vw;
   display: flex;
+  grid-column-start: 3;
   align-items: center;
   gap: 0.6vw;
+
+  justify-self: end;
 }
 .toggledBtn {
   position: absolute;
