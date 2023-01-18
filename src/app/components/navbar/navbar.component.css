@@ -1,0 +1,74 @@
+.navbar {
+  background-color: #131313;
+  display: flex;
+  width: 100vw;
+  height: calc(15vh+ 7vh);
+  min-height: 3vw;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .pages {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  padding-left: 3.5vw;
+}
+.navbar .pages a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+.logo {
+  width: 3vw;
+  min-width: 8vw;
+  justify-self: center;
+  padding: 1rem;
+}
+.likes {
+  margin-right: 3.5vw;
+  display: flex;
+  align-items: center;
+  gap: 0.6vw;
+}
+.toggledBtn {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.toggledBtn .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+}
+@media (max-width: 400px) {
+  .toggledBtn {
+    display: flex;
+  }
+  .navBarLinks {
+    display: none;
+  }
+  .navbar {
+    /*  flex-direction: column; */
+  }
+  /* .pages {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-self: flex-end;
+    z-index: 50; }*/
+
+  .logo > img {
+    justify-self: flex-start;
+  }
+  .likes {
+    margin-right: 15vw;
+    display: flex;
+    align-items: center;
+    gap: 0.6vw;
+  }
+}
