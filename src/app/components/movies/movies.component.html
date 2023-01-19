@@ -1,4 +1,13 @@
 <p>{{ console.log(moviesList) }}</p>
-<p *ngFor="let item of moviesList">
-  {{ console.log(item) }}
-</p>
+<div class="list">
+  <img
+    class="imageMovie"
+    *ngFor="let item of moviesList"
+    [src]="item.urlPoster"
+    alt="{{ item.title }} image"
+    onError="this.src='assets/error_image.png'"
+  />
+  <p *ngFor="let item of moviesList">
+    {{ console.log(item.title) }}
+  </p>
+</div>

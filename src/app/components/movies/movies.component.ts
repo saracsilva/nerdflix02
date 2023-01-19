@@ -8,6 +8,8 @@ interface Movie {}
   styleUrls: ['./movies.component.css'],
 })
 export class MoviesComponent {
-  moviesList: [{}] = movies.data.movies;
+  moviesList: [
+    { title: String; rating: Number; urlPoster: String; year: Number }
+  ] = movies.data.movies;
   console = console;
 }
