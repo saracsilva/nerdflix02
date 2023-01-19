@@ -1,13 +1,22 @@
-<p>{{ console.log(moviesList) }}</p>
-<div class="list">
-  <img
-    class="imageMovie"
-    *ngFor="let item of moviesList"
-    [src]="item.urlPoster"
-    alt="{{ item.title }} image"
-    onError="this.src='assets/error_image.png'"
-  />
-  <p *ngFor="let item of moviesList">
-    {{ console.log(item.title) }}
-  </p>
+<div class="nerdflix">
+  <div class="title">
+    <h1>Movies</h1>
+  </div>
+  <div class="list">
+    <div *ngFor="let item of moviesList" class="movieWrapper">
+      <div class="imageMovie">
+        <img
+          class="imageMovie"
+          [src]="item.urlPoster"
+          alt="{{ item.title }} image"
+          onError="this.src='assets/error_image.png'"
+        />
+      </div>
+      <h5>{{ item.title }}</h5>
+      <p>{{ item.year }}</p>
+    </div>
+    <p *ngFor="let item of moviesList">
+      {{ console.log(item.title) }}
+    </p>
+  </div>
 </div>
