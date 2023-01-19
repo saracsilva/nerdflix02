@@ -1,22 +1,20 @@
 <div class="nerdflix">
+  <h3 *ngIf="moviesList.length < 1">Loading...</h3>
   <div class="title">
     <h1>Movies</h1>
   </div>
   <div class="list">
-    <div *ngFor="let item of moviesList" class="movieWrapper">
-      <div class="imageMovie">
+    <div *ngFor="let movie of moviesList" class="movieWrapper">
+      <div class="imageMovie" (click)="addFavorite(movie)">
         <img
           class="imageMovie"
-          [src]="item.urlPoster"
-          alt="{{ item.title }} image"
+          [src]="movie.urlPoster"
+          alt="{{ movie.title }} image"
           onError="this.src='assets/error_image.png'"
         />
       </div>
-      <h5>{{ item.title }}</h5>
-      <p>{{ item.year }}</p>
+      <h5>{{ movie.title }}</h5>
+      <p>{{ movie.year }}</p>
     </div>
-    <p *ngFor="let item of moviesList">
-      {{ console.log(item.title) }}
-    </p>
   </div>
 </div>

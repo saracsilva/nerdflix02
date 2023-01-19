@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title: string = 'Nerdflix';
+  /*   arrFavorite: any = [];
+  console = console;
+
+  addItem(newItem: string) {
+    this.arrFavorite.push(newItem);
+  } */
 }
